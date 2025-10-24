@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLPT N3 파이널 체크북 - 플래시 카드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>JLPT N3 파이널 체크북</h1>
+        <div id="category-tabs">
+            <button class="tab active" data-category="한자 읽기">한자/어휘</button>
+            <button class="tab" data-category="유의어">유의어</button>
+            <button class="tab" data-category="문법">문법</button>
+            <button class="tab" data-category="hard_items">자주 틀린 문제</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="card-container">
+            <!-- 플래시 카드 영역 -->
+            <div id="flashcard" class="card" onclick="flipCard()">
+                <div class="card-face card-front">
+                    <!-- 후리가나를 위한 Ruby 태그 포함 (JS에서 삽입) -->
+                    <p id="card-term"></p>
+                    <small id="card-category"></small>
+                </div>
+                <div class="card-face card-back">
+                    <p id="card-meaning"></p>
+                    <div class="card-example">
+                        <p id="example-jp"></p>
+                        <p id="example-kr"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="stats-display">
+                <span id="progress">0/0</span> | 
+                <span id="correct-count">O 0</span> / 
+                <span id="incorrect-count">X 0</span>
+            </div>
+        </div>
+
+        <!-- 카드 조작 및 TTS 버튼 -->
+        <div id="controls">
+            <button id="tts-button" onclick="speakText()">🔊 발음 듣기</button>
+            <div id="answer-buttons">
+                <button class="answer-btn incorrect" onclick="handleAnswer(false)">❌ 틀림 (다시)</button>
+                <button class="answer-btn correct" onclick="handleAnswer(true)">⭕ 맞음 (다음)</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

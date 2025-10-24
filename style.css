@@ -1,0 +1,187 @@
+/* style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.tab {
+    padding: 8px 12px;
+    border: none;
+    background-color: #5c6bc0;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #ff9800; /* 활성 탭 강조 */
+    font-weight: bold;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 플래시 카드 스타일 */
+#card-container {
+    perspective: 1000px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.card-front {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3f51b5;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #fffde7;
+    font-size: 1.5em;
+    color: #555;
+}
+
+#card-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.8em;
+    color: #777;
+    font-weight: normal;
+}
+
+/* 루비 태그 스타일 (후리가나) */
+ruby {
+    font-size: 1em; /* 메인 텍스트 크기 */
+}
+rt {
+    font-size: 0.4em; /* 후리가나 크기 (메인 텍스트보다 훨씬 작게) */
+    color: #ff5722;
+}
+
+.card-example {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #009688;
+}
+
+/* 컨트롤 및 버튼 스타일 */
+#controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#tts-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#answer-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.answer-btn {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: #4caf50;
+    color: white;
+}
+
+.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+#stats-display {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
