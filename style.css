@@ -143,15 +143,35 @@ rt {
     gap: 15px;
 }
 
-#tts-button {
-    padding: 10px 20px;
-    font-size: 1em;
+#tts-controls {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#tts-button, #tts-slow-button, #tts-example-button {
+    padding: 10px 15px;
+    font-size: 0.95em;
     background-color: #00bcd4;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+#tts-slow-button {
+    background-color: #009688;
+}
+
+#tts-example-button {
+    background-color: #607d8b;
+}
+
+#tts-button:hover, #tts-slow-button:hover, #tts-example-button:hover {
+    opacity: 0.9;
 }
 
 #answer-buttons {
