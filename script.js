@@ -193,7 +193,7 @@ function getBestJapaneseVoice() {
 
 // VoiceRSS API 사용 예시
 // API 키는 실제 발급받은 키로 바꿔야 합니다. 현재는 표시용입니다.
-const VOICERSS_API_KEY = 'YOUR_API_KEY'; 
+const VOICERSS_API_KEY = '34901f47273747d9a853f0f95aacbe40'; 
 
 /**
  * 외부 TTS API를 사용해서 오디오 URL을 얻습니다.
