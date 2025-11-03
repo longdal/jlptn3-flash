@@ -45,7 +45,11 @@
 
         <!-- 카드 조작 및 TTS 버튼 -->
         <div id="controls">
-            <button id="tts-button" onclick="speakText()">🔊 발음 듣기</button>
+            <div id="tts-controls">
+                <button id="tts-button" onclick="speakText()">🔊 발음 듣기</button>
+                <button id="tts-slow-button" onclick="speakText(0.6)">🐢 느린 발음</button>
+                <button id="tts-example-button" onclick="speakExample()">📣 예문 듣기</button>
+            </div>
             <div id="answer-buttons">
                 <button class="answer-btn incorrect" onclick="handleAnswer(false)">❌ 틀림 (다시)</button>
                 <button class="answer-btn correct" onclick="handleAnswer(true)">⭕ 맞음 (다음)</button>
